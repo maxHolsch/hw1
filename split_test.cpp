@@ -1,18 +1,22 @@
-/*
-CSCI 104: Homework 1 Problem 1
-
-Write a recursive function to split a sorted singly-linked
-list into two sorted linked lists, where one has the even 
-numbers and the other contains the odd numbers. Students 
-will receive no credit for non-recursive solutions. 
-To test your program write a separate .cpp file and #include
-split.h.  **Do NOT add main() to this file**.  When you submit
-the function below should be the only one in this file.
-*/
-
-#include "split.h"
 #include <iostream>
-/* Add a prototype for a helper function here if you need */
+#include "split.h"
+using namespace std;
+
+
+
+//print function: make sure to remove for program. Okay to be loop since it's just a driver function
+void print(Node*& in)
+{
+  Node* temp = in;
+ 
+    while (temp != NULL) {
+      if(temp!=NULL){
+        cout << temp->value << "  ->  ";
+        temp = temp->next;}
+    }
+    if(temp==NULL){
+			cout << "NULL" << endl;}
+}
 
 
 void addToTailRec(Node*& in, Node*& sub){// recursive add to tail function to keep list in sorted order
@@ -69,13 +73,50 @@ void split(Node*& in, Node*& odds, Node*& evens)//node *& notation is a referenc
 		
 	}
   }
-//print(in);
-//print(evens);
-//print(odds);
-//cout<<endl;
+print(in);
+print(evens);
+print(odds);
+cout<<endl;
 split(in, odds, evens); //recursive call
 
 
 }
  
+}
+
+int main()
+{
+
+	
+   // Node* head = NULL;
+	Node* in=NULL;
+	Node* evens= NULL;
+	Node* odds= NULL;
+			
+		Node* in1 = new Node(1,NULL);
+		Node* in2 = new Node(2,NULL);
+		Node* in3 = new Node(3,NULL);
+		Node* in4 = new Node(4,NULL);
+
+		in=in1;
+    in1->next = in2;
+    in2->next = in3;
+    in3->next = in4;
+    in4->next = NULL;
+
+	cout << "Given the linked list\n";
+	
+		print(in);
+		print(evens);
+		print(odds);
+		cout<<endl;
+	
+		split(in, odds, evens);
+//destructors
+	delete in1;
+	delete in2;
+	delete in3;
+	delete in4;
+	
+    return 0;
 }
