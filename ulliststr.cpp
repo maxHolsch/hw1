@@ -104,11 +104,10 @@ void ULListStr::pop_back(){
 }
 void ULListStr::push_back(const std::string& val){
 	/*
+	pseudocode
 if tail is NULL	
 	create new item
 if(tail_->last!=0)
-	tail_->val[tail_->last]=val;	
-	tail_->last=tail_->last-1;
 else (i.e. need to create new item )
 	Item* y= new Item();
 	assign in values
