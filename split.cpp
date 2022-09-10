@@ -30,7 +30,7 @@ void split(Node*& in, Node*& odds, Node*& evens)//node *& notation is a referenc
 {
 
   if(in==NULL){//termination condition: if in is NULL recursive function ends
-  cout<<"linked list in is NULL";
+  std::cout<<"linked list in is NULL";
   }
 
   else{

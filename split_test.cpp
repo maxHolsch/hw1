@@ -7,18 +7,18 @@ using namespace std;
 //print function: make sure to remove for program. Okay to be loop since it's just a driver function
 void print(Node*& in)
 {
-  Node* temp = in;
- 
-    while (temp != NULL) {
-      if(temp!=NULL){
-        cout << temp->value << "  ->  ";
-        temp = temp->next;}
+  Node* x = in;
+		
+    while (x != NULL) {
+       if(x!=NULL){
+        cout << x->value << " -> ";
+        x = x->next;}
     }
-    if(temp==NULL){
-			cout << "NULL" << endl;}
+    if(x==NULL){
+			cout << "NULL " << "\n";}
 }
 
-
+/*
 void addToTailRec(Node*& in, Node*& sub){// recursive add to tail function to keep list in sorted order
 	if(sub->next!=NULL){
 		sub=sub->next;
@@ -82,7 +82,7 @@ split(in, odds, evens); //recursive call
 
 }
  
-}
+}*/
 
 int main()
 {
