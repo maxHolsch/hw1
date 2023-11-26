@@ -1,4 +1,4 @@
-
+adding this as a test
 
 Testing Homework problem 1: There is a driver function in split_test, please use it to see everything work on my sample case. 
 Please use this command to compile 
